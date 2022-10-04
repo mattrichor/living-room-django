@@ -25,7 +25,7 @@ class Person(models.Model):
                                null=True,
                                related_name='children_of_father')
     spouse = models.ForeignKey('self', models.SET_NULL,
-                               blank=True, null=True, related_name='spouse')
+                               blank=True, null=True, related_name='spouse_of')
 
     def __str__(self):
         return self.forename
